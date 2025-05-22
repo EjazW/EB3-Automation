@@ -45,28 +45,11 @@ npx playwright test --ui
 npx playwright test --debug
 ```
 
-## GitHub Actions Setup
-
-1. Create `.github/workflows` directory in your repository
-2. Add `playwright.yml` file with the workflow configuration
-3. Push your code to GitHub
-4. GitHub Actions will automatically run tests on:
-   - Push to main branch
-   - Pull requests to main branch
-
-The workflow will:
-- Set up Node.js environment
-- Install dependencies
-- Install Playwright browsers
-- Run all tests
-- Upload test reports as artifacts
-
 ## Test Files
 
 - `tests/booklet.spec.js` - Booklet creation tests
 - `tests/company.spec.js` - Company management tests
 - `tests/login.spec.js` - Login functionality tests
-- `tests/profile.spec.js` - Profile management tests
 
 ## Test Structure
 

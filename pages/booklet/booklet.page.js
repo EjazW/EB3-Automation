@@ -146,49 +146,14 @@ class BookletPage {
     async booklet_creation_step5() {
         await this.page.goto("https://ebthree.com/booklets/edit_report/27161/step-5");
         await this.page.waitForTimeout(10000);
-        //Upload rates file
-        // await this.page.locator(this.locators.upload_rates_button).click();
-        // await this.page.waitForTimeout(2000);
-        // const ratesPath = path.join(process.cwd(), 'assets', 'RATE_UPLOAD_SHEET  - test.xlsx');
-        // await this.page.setInputFiles('input[type="file"]', ratesPath);
-        // await this.page.waitForTimeout(5000);
-        // await this.page.pause();
         await this.page.locator(this.locators.pay_period).fill("12");
         await this.page.locator(this.locators.rate).fill("10000");
-        // await this.page.locator(this.locators.rate_type_option).first().click({ force: true });
         await this.page.selectOption('#ratetype', '2_tier');
         await this.page.selectOption('#formula_type', 'percentage');
         await this.page.locator(this.locators.buy_up_checkbox).click();
         await this.page.locator(this.locators.SAVE_AND_NEXT_BUTTON_5).nth(1).click();
 
-        // //For Option 2
-        // await this.page.locator(this.locators.opt_2).nth(1).click();
-        // if (await this.page.getByRole('tab', { name: 'Health1' }).isVisible()) {
-        //     await this.page.getByRole('tab', { name: 'Health1' }).click()
-        //     await this.page.locator(this.locators.pay_period).fill("12")
-        //     await this.page.locator(this.locators.rate).fill("10000")
-        //     await this.page.selectOption('#ratetype', '2_tier')
-        //     await this.page.selectOption('#formula_type', 'percentage')
-        //     await this.page.locator(this.locators.buy_up_checkbox).click()
-        //     await this.page.locator(this.locators.save_and_complete_button).nth(3).click()
-        //     await this.page.waitForTimeout(10000)
-        //   } else {
-        //     await this.page.locator(this.locators.save_and_complete_button).nth(3).click()
-        //   }        
-          
-        //   //for 3
-        // if  (await this.page.getByRole('tab', { name: 'Health1' }).isVisible()) {
-        //     await this.page.getByRole('tab', { name: 'Health1' }).click()
-        //     await this.page.locator(this.locators.pay_period).fill("12")
-        //     await this.page.locator(this.locators.rate).fill("10000")
-        //     await this.page.selectOption('#ratetype', '2_tier')
-        //     await this.page.selectOption('#formula_type', 'percentage')
-        //     await this.page.locator(this.locators.buy_up_checkbox).click()
-        //     await this.page.locator(this.locators.save_and_complete_button).nth(3).click()
-        //     await this.page.waitForTimeout(10000)
-        //  } else {
-        //     await this.page.locator(this.locators.save_and_complete_button).nth(3).click()
-        //   }     
+        
     }
         
 
